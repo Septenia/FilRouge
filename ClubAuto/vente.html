@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Page d'accueil du site CLUB AUTO" />
+        <title>CLUB AUTO - Accueil</title>
+        <link rel="stylesheet " href="/css/normalize_8.0.1.css">
+        <link rel="stylesheet " href="/css/ca.css">
+        <link rel="stylesheet" href="/icones/fontawesome-free-6.5.1-web/css/all.css">
+        <script src="/js/jquery-3.4.1.min.js"></script>
+        <script src="/js/menu.js"></script>
+    </head>
+
+
+    <body>
+
+        <!-- En tête-->
+        <header id="entetePrincipale">
+            <section id="info" role="banner" class="row">
+                <h1 id="titresite">CLUB AUTO</h1>
+                <address id="adresse">
+                    <img id="iadresse" src="/icones/iadresse.png" alt="icône addresse" />
+                    <h1>ADRESSE :<br /><span id="sousTitre">AVENUE CHARLES DE GAULES <br /> 75000 PARIS</span></h1>
+                </address>
+                <address id="phone">
+                    <img id="itelephone" src="/icones/itelephone.png" alt="icône téléphone" />
+                    <h1>T&#201;L&#201;PHONE :<br /><strong id="numero">01 23 45 67 89</strong></h1>
+                </address>
+                <address id="information">
+                    <h1>OUVERTURE : <strong id="sousTitre">Du Lundi au Samedi</strong><br /> HORAIRES : <strong id="sousTitre">De 9h à 17h</strong></h1>
+                </address>
+                <address id="sociaux">
+                    <i class="fab fa-facebook" id="fb" aria-hidden="true"></i>
+                    <i class="fab fa fa-twitter" id="twitter" aria-hidden="true"></i>
+                </address>
+                <button id="menuToggle"><img src="/images/layout/hamburger.svg" /></button>
+            </section>
+            <nav id="HMenu">
+                <h1 class="accessibility">Menu Principal</h1>
+                <p class="accessibility"><a href="#ContenuPrincipal" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+                <ul>
+                    <li><a href="/index.html" id="PageAffichee">Accueil</a></li>
+                    <li><a href="/vente.html">Vente</a></li>
+                    <li><a href="/location.html">Location</a></li>
+                    <li><a href="/about.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+<!-- Contenu -->        
+        <main id="ContenuPrincipal">
+
+        </main>
+        
+<!-- Pied de page -->
+        <footer>
+            <section id="FooterTitre">
+                <h1><span id="Club">CLUB</span> AUTO</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eligendi iure magni veniam illo natus ut quia nam ex dignissimos unde eos rerum, distinctio, mollitia dolor temporibus dolorem tenetur? Quidem.</p>
+            </section>
+            <section id="FooterOuverture">
+                <h1>HORAIRES D'OUVERTURE</h1>
+                <p>
+                    <strong>Lundi-Samedi :</strong><span id="ouvert"> 09:00 -17:00</span><br />
+                    <strong>Dimanche et jours f&#233;ri&#233;s :</strong><span id="ouvert"> Ferm&#233;</span>
+                </p>
+            </section>
+            <Section id="Newsletter">
+                <h1>NEWSLETTER</h1>
+                <input id="email" type="email" titre="Entrez votre email" /> <i class="fa-solid fa-wifi fa-rotate-90" style="font-weight:bold;color:#CC6119;"></i><br />
+                <label for="email">Inscrivez-vous pour recevoir les derni&#232;res offres</label>
+            </section>
+            <section id="FootSociaux">
+                <h1>RESEAUX SOCIAUX</h1>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>                
+                <i class="fa-brands fa-google-plus-g"></i>
+                <i class="fa-brands fa-square-youtube"></i>
+            </section>
+            <section id="Copyrigth">
+                <h1><p>Copyrigth &copy; Club Auto - Tout droits réservés</p></h1>
+            </section>
+        </footer>
+    </body>
+</html>

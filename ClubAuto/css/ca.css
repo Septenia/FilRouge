@@ -1,0 +1,413 @@
+/* Import des polices d'ecriture utilisées */
+/* Non acceptées
+@import url('https://fonts.google.com/specimen/Open+Sans?query=open+sans');
+@import url('https://fonts.google.com/specimen/Montserrat?query=mont');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Non supporté par tous les navigateurs
+:root{
+    --noir : #232628 ;
+    --gris : #ECEFF3 ;
+    --blanc : #ECEFF3 ;
+    --jaune : #FAB637 ;
+    --rouge : #FF4848 ;
+    --marron : #CC6119 ;
+    --bleu : #6C98E1;
+    --bs-navbar-toggler-icon-bg : #6C98E1;
+}
+*/
+
+/* X-Content-Type-Options: nosniff  à mettre où ?*/ 
+
+/* Fichier css pour clubauto */
+body {
+font-family: 'Open Sans', Verdana, 'Geneva', Tahoma, sans-serif;
+color : #232628 ;
+background-color: #ECEFF3;
+}
+
+img {
+    padding:0;
+    margin:0;
+}
+
+/* ************************************************************************************************* */
+/* ENTETE */
+/* ************************************************************************************************* */
+
+
+/* Police des titres */
+h1, h2, h3 {
+    font-family: 'Monserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* Définition de la présentation des titres et de la bannière */
+#info, #TitrePrincipal, footer, h1 {
+    background-color: #232628 ;
+    color : #ECEFF3;
+}
+
+#autoRecent, article h1, #ContactNous h1 {
+    background-color: #ffffff ;
+    color : #232628;
+}
+
+/* Permet de masquer le texte pour la lecture de texte pour les internautes malvoyants */
+.accessibility {
+    position : absolute ;
+    left : -15000px ; 
+}
+
+
+/* BANNIERE INFORMATION */
+#adresse h1, #phone h1, #information h1 {
+    color : #CC6119; 
+    font-size : 1em ;
+}
+/* Définition de la taille des icônes de l'entête */
+#iadresse, #itelephone {
+    width: 45px;
+    height: 45px;
+    margin:0 0 0 10px;
+    padding:0;
+}
+
+#numero, #fb, #twitter {
+    color : #ECEFF3;
+    font-size : 1.5em ;
+    font-weight: bold ;
+}
+
+/* BARRE DE NAVIGATION */
+
+/*.custom-toggler.navbar-toggler-icon { 
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#6C98E1' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+} 
+/*bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' */
+
+/*.custom-toggler.navbar-toggler { border-color: #6C98E1; }
+/*Source: https://prograide.com/pregunta/38247/bootstrap-4--changer-la-couleur-du-toggler-hamburger */
+
+#entetePrincipale{
+    z-index: 2000;
+}
+
+#imenuToggle{
+    color : #6C98E1;
+    font-size: 2.5em;
+    border: none;
+}
+
+#HMenu a{
+    font-weight: bold;
+    margin:10px;
+}
+
+#HMenu a:link, a:visited {
+    color : #232628 ;
+    background-color: #ECEFF3;
+}
+
+#HMenu a:hover {
+    color : #CC6119  ;
+    background-color: #232628;
+}
+
+#HMenu a:active{
+    color : #ECEFF3;
+    background-color: #232628 ;
+}
+
+/* Met en évidence le bouton du menu correspondant à la page affichée */
+#PageAffichee {
+    color : #ECEFF3;
+    background-color: #CC6119 ;
+}
+
+/* ************************************************************************************************* */
+/* CONTENU PAGE D'ACCUEIL */
+/* ************************************************************************************************* */
+
+#LeMeilleur {
+    color : #CC6119 ; 
+}
+
+/* ARTICLES */
+article {
+    padding :30px 15px;
+    background-color: #ffffff;
+}
+
+#article1 p:first-of-type{
+    font-weight: bold;
+}
+
+#article1 p:not(:first-of-type), #article2 p:not(li p){
+    opacity: 0.5;
+}
+
+#article2 #contenu ul {
+    padding : 15px;
+    color : #CC6119 ;
+    list-style-type: "\2714" ; /*&#10004; \u2714*/
+}
+
+#article2 #contenu ul p {
+    color : #232628;
+    padding-left:10px;
+}
+
+/* LOUER OU ACHETER */
+#choix{
+    background-color: #ECEFF3;
+    background-image: url("../images/femme_voiture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+#louer h1, #acheter h1{
+    background-color: transparent;
+    color:#232628;
+}
+
+#louer {
+    background-color: #FAB637;
+    opacity: 0.8;
+    color: #ECEFF3;
+}
+
+#acheter {
+    background-color: #FF4848;
+    opacity: 0.8;
+    color: #ECEFF3;
+}
+
+/* VEHICULES RECENTS */
+#autoRecent{
+    background-color: #232628;
+}
+
+#autoRecent h1:first-child{
+    font-size: 2.5em;
+    text-align :center;
+}
+
+#barreOrange {
+    border-top : 5px solid #CC6119;
+}
+
+#barreGrise{
+    border-top : 2px solid #ECEFF3;
+}
+
+#bgvehtxt{
+    background-color:#ffffff
+}
+#vehtxt {
+    background-color: #232628;
+    opacity: 0.8;
+}
+
+#vehicule h1{
+    padding: 0 25px 15px 0;
+}
+
+#vehicule button {
+    background-color: #6C98E1;
+    color :#ECEFF3;
+    font-weight: bold;
+    border : none;
+    padding:15px;
+    margin-left : 55px;
+}
+
+#vehicule button span{
+    font-size :small;
+    color:#232628;
+    text-decoration: line-through ;
+}
+
+/* POURQUOI NOUS CHOISIR */
+#NousChoisir {
+    background-color: #ffffff;
+}
+
+#ttlNousChoisir {
+    font-size: 2.5em;
+    text-align :center;
+    color:#232628;
+    background-color: transparent;
+}
+
+#Finance h1, #Equipe h1, #Clientele h1, #Service h1 {
+    color:#232628;
+    background-color: transparent;
+    text-transform :uppercase;
+}
+
+#Finance img, #Equipe img, #Clientele img, #Service img {
+    width: 65px;
+    height: 85px;
+}
+
+#TxtNousChoisir {
+    opacity : 0.5;
+}
+
+/* Bouton Contact page d'accueil */
+#contacter{
+    background-color: #6C98E1;
+    font-weight: bold;
+    border : none;
+    min-width:max-content;
+    height: 65px;
+    padding:15px 45px;
+    border-radius: 5px;
+}
+
+#contacter a {
+    text-decoration: none;
+    color :#ffffff;
+    text-transform: uppercase;
+}
+
+#contacter:hover {
+    background-color :#CC6119;
+}
+
+#contacter:active {
+    background-color:#ECEFF3;
+}
+
+/* CLUB AUTO VENTE ET LOCATION */
+#ClubAutoVL {
+    background-image: url("../images/vehicule3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin :15px 15px 45px 15px;
+    padding : 85px 0 ; /* 85 pour faire déborder l'image de la zone de texte */
+    background-color: #ffffff;
+}
+
+#ClubAutoVL h1 {
+    text-transform: uppercase;
+    background-color :transparent;
+}
+
+#ClubAutoVL h1 span{
+    color :#232628;
+}
+
+#txtVL {
+    background-color: #FAB637;
+    opacity:0.7;
+    padding : 65px;
+}
+
+/* ************************************************************************************************* */
+/* PIED DE PAGE */
+/* ************************************************************************************************* */
+
+footer h1 {
+    font-size : medium;
+}
+
+footer p, label {
+    font-size : medium;
+    opacity : 0.5;
+}
+
+#Club {
+    color:#6C98E1;
+}
+
+/* Aspect des icônes des réseaux sociaux */
+#FootSociaux i {
+    color : #ECEFF3 ;
+    font-size : 2em;
+    width: 40px;
+    height : auto ;
+}
+
+#Copyrigth h1 p {
+    text-align:center;
+}
+
+
+/* AFFICHAGE POUR LES ECRANS DE TAILLE LG ET PLUS  */
+@media screen and (min-width:992px) {
+
+    /* Entête */
+    header {
+        position : fixed;
+        top : 0;
+    }
+    #HMenu {
+        background-color: #ECEFF3;
+        opacity: 0.8;
+    }
+
+    /* Définition de la taille des icônes de l'entête */
+    #iadresse, #itelephone {
+        width: 25px;
+        height: 25px;
+        margin:0;
+        padding:0;
+    }
+
+    #adresse h1, #phone h1, #information h1 {
+        color : #CC6119; 
+        font-size : 0.7em ;
+        margin:0;
+        padding:2px;
+    }
+
+    #numero {
+        color : #ECEFF3;
+        font-size : 1.2em ;
+        font-weight: bold ;
+    }
+
+    #sthoraire {
+        color : #ECEFF3 ;
+        font-size : 0.8em ;
+        font-weight:bold ;
+    }
+
+    #staddresse {
+        color : #ECEFF3 ;
+        font-size : 0.8em ;
+        font-weight:normal ;
+    }
+
+    /* VEHICULES RECENTS LG */
+    #vehicule h1{
+        font-size:larger;
+    }
+
+    #vehicule button {
+        float: right;
+    }
+
+    /* NOUS CHOISIR */
+    #Finance h1, #Equipe h1, #Clientele h1, #Service h1 {
+        font-size:larger;
+    }
+    
+    #Finance img, #Equipe img, #Clientele img, #Service img {
+        width: 45px;
+        height: 55px;
+    }
+
+    /* FOOTER Se superpose au dernier article */
+    footer {
+        position : fixed;
+        bottom : 0;
+    }
+
+}

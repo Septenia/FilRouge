@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Page d'accueil du site CLUB AUTO" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CLUB AUTO - Accueil</title>
+        <!--<link rel="stylesheet " href="/css/normalize_8.0.1.css">-->
+        <link rel="stylesheet " href="/css/bootstrap.min.css">
+        <link rel="stylesheet " href="/css/ca.css">
+        <link rel="stylesheet" href="/icones/fontawesome-free-6.5.1-web/css/all.css">
+        <script src="/js/jquery-3.4.1.min.js"></script>
+        <script src="/js/menu.js"></script>
+        <script src="/js/bootstrap.bundle.min.js" defer></script>
+    </head>
+
+
+    <body>
+        <!--En tête Bootstrap -->
+        <header id="entetePrincipale" class="container-fluid position-fixed-top m-0 p-0">
+            <!--Informations-->
+            <section id="info" role="banner" class="row p-3">
+                <h1 id="titresite" class="offset-lg-1 col-10 col-lg-3">CLUB AUTO</h1>
+                <address id="adresse" class="col-lg-2 d-none d-lg-block">
+                    <div class="row">
+                        <img id="iadresse" class="col-lg-3 img-fluide aria-hidden='true'" src="/icones/iadresse.png" alt="icône addresse" />
+                        <h1 class="col-10">ADRESSE :<br /><span id="staddresse">AVENUE CHARLES DE GAULES <br /> 75000 PARIS</span></h1>
+                    </div>
+                </address>
+                <address id="phone" class="col-10 col-lg-2">
+                    <div class="row p-3 p-lg-0">
+                        <img id="itelephone" class="col-lg-2 img-fluide aria-hidden='true'" src="/icones/itelephone.png" alt="icône téléphone" />
+                        <h1 class="col-10">T&#201;L&#201;PHONE :<br /><strong id="numero">01 23 45 67 89</strong></h1>
+                    </div>
+                </address>
+                <address id="information" class="col-lg-3 d-none d-lg-block">
+                    <h1>OUVERTURE : <strong id="sthoraire">Du Lundi au Samedi</strong><br /> HORAIRES : <strong id="sthoraire">De 9h à 17h</strong></h1>
+                </address>
+                <address id="sociaux" class="col-lg-1 d-none d-lg-block">
+                    <a class="me-1" style="--bs-link-color-rgb: #ffffff" href="#"><i class="fab fa-facebook" id="fb"></i></a>
+                    <a class="ms-1" style="--bs-link-color-rgb: #ffffff" href="#"><i class="fab fa fa-twitter" id="twitter"></i></a>
+                </address>
+            </section>
+
+            <!-- Barre de navigation -->
+            <section id="HMenu" class="navbar navbar-expand-lg m-0 p-0">        
+                <!--Accessibilité-->
+                <h1 class="accessibility">Menu Principal</h1>
+                <p class="accessibility"><a href="#ContenuPrincipal" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+
+                <button id="menuToggle" class="navbar-toggler position-fixed top-0 end-0 z-index-tooltip" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="" role="button"><i class="fa fa-bars" id="imenuToggle"></i></span> 
+                </button>
+                <!--<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>-->
+                <nav role="navigation" class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-0 "> <!--ms-auto permet de décaller la barre de nav à droite, l'inverse est me-auto (start et end), pour faire des boutons arrondis, ajouter nav-pills dans les classes, ici, ça fait moche -->
+                        <li class="nav-item active">
+                            <a class="nav-link m-0" aria-current="page" id="PageAffichee" href="/index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-0" href="/vente.html">Vente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-0" href="/location.html">Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-0" href="/about.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        
+
+<!-- Contenu -->        
+        <main id="ContenuPrincipal">
+            <!-- Image principale -->
+            <section id="TitrePrincipal" class="row">
+                <img id="iTitrePrincipal" class="col-12 d-none d-lg-block" src="/images/vehicule1.jpg" alt="Voitures alignées de biais, brillant sous la lumière d'un soleil caché par de légers nuages lui donnant un aspect" class="img-fluide"/>
+                <div id="TitrePrincipal" class="col-lg-1"></div>
+                <div id="TitrePrincipal" class="col-12 col-lg-11">
+                    <h1 class="m-4">CLUB AUTO <span id="LeMeilleur">LE MEILLEUR DE L&#39;AUTOMOBILE</span></h1>
+                </div>
+            </section>
+
+           <section id="lstArticles" class="container-fluid m-0 p-0">
+                 <!-- article 1 -->
+                <article id="article1" class="row p-5">
+                    <figure id="image" class="col-12 col-lg-6">
+                        <img class="col-12" src="/images/clients.jpg" alt="Deux personnes décontractées, heureuses d'une réussite, devant une grosse voiture orange-brun" class="img-fluide"/>
+                    </figure>
+                    <div id="contenu" class="col-12 col-lg-6">
+                        <h1 class="mb-5">BIENVENUE CHEZ <span id="LeMeilleur">CLUB AUTO</span></h1>
+                        <p class="lead">Lorem Ipsum dolor si amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tellus elementum sagittis vitae et leo duis ut diam. Nisi porta lorem mollis aliquam ut porttitor leo. Sem et tortor consequat id porta nibh venenatis. Senectus et netus et malesuada fames ac turpis egestas. Ut tristique et egestas quis ipsum. At varius vel pharetra vel turpis nunc eget lorem. Tristique senectus et netus et malesuada fames. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Et ultrices neque ornare aenean euismod elementum. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Ac placerat vestibulum lectus mauris ultrices. Leo a diam sollicitudin tempor id eu nisl. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. Amet commodo nulla facilisi nullam vehicula ipsum. Nunc aliquet bibendum enim facilisis gravida neque convallis. Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisi quis eleifend quam adipiscing vitae. 
+                        </p>
+                    </div>
+                </article>
+
+                <!-- article 2 -->        
+                <article id="article2" class="row p-5">
+                    <div id="contenu" class="col-12 col-lg-6">
+                        <h1 class="mb-5">LE MEILLEUR DE L'AUTOMOBILE</h1>
+                        <p>Laoreet non curabitur gravida arcu. Dui sapien eget mi proin sed libero enim. Et pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Nunc lobortis mattis aliquam faucibus purus. Arcu ac tortor dignissim convallis aenean. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Ornare arcu odio ut sem nulla pharetra diam sit. Vitae et leo duis ut diam quam nulla porttitor. Donec massa sapien faucibus et molestie ac feugiat. Sodales ut etiam sit amet nisl purus in. Magna sit amet purus gravida quis blandit. Vel facilisis volutpat est velit. Viverra nibh cras pulvinar mattis. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Morbi quis commodo odio aenean sed adipiscing diam. Tristique senectus et netus et malesuada fames.</p>
+                        <ul>
+                            <li><p>Lorem ipsum dolor sit amet</p></li>
+                            <li><p>Lorem ipsum dolor sit amet</p></li>
+                            <li><p>Lorem ipsum dolor sit amet</p></li>
+                            <li><p>Lorem ipsum dolor sit amet</p></li>
+                            <li><p>Lorem ipsum dolor sit amet</p></li>
+                        </ul>
+                    </div>
+                        <figure id="image" class="col-12 col-lg-6">
+                            <img class="col-12" src="/images/entretien.jpg" alt="Un homme lustrant le capot d'une voiture." class="img-fluide rounded" />
+                        </figure>
+                </article>
+           </section>
+            
+            <!-- Sélection entre louer et acheter --> 
+            <div class="container-fluid m-0 p-0">
+                <Section id="choix" class="row justify-content-center p-5">
+                    <!--Louer-->
+                        <div id="louer" class="col-11 col-lg-5 m-4 p-5">
+                            <a class="text-decoration-none" href="/location.html"></a>
+                                <h1>Vous souhaitez louer ?</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tellus elementum sagittis vitae et leo duis ut diam. Nisi porta lorem mollis aliquam ut porttitor leo. Sem et tortor consequat id porta nibh venenatis. Senectus et netus et malesuada fames ac turpis egestas. Ut tristique et egestas quis ipsum. At varius vel pharetra vel turpis nunc eget lorem. Tristique senectus et netus et malesuada fames. </p>
+                            </a>
+                        </div>
+                    <!-- Acheter --> 
+                        
+                        <div id="acheter" class="col-11 col-lg-5 m-4 p-5">
+                            <a class="text-decoration-none" href="/vente.html">  
+                                <h1>Vous souhaitez acheter ?</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tellus elementum sagittis vitae et leo duis ut diam. Nisi porta lorem mollis aliquam ut porttitor leo. Sem et tortor consequat id porta nibh venenatis. Senectus et netus et malesuada fames ac turpis egestas. Ut tristique et egestas quis ipsum. At varius vel pharetra vel turpis nunc eget lorem. Tristique senectus et netus et malesuada fames. </p>
+                            </a>
+                        </div>
+                </section>
+            </div>
+
+            <!-- Véhicules récents --> 
+            <Section id="autoRecent" class="container-fluid m-0 p-0">
+                <h1 class="justify-content-center row p-5 m-0">
+                    VEHICULES RECENTS
+                    <hr id="barreOrange" class="justify-content-center m-3" />
+                </h1>
+                <section id="LstVehicules" class="row vh-50 overflow-auto scrollbar-primary">
+                    <section id="vehicule" class="col-12 col-lg-4 m-0 p-0">
+                        <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="img-fluide col-12"/>
+                        <section id="bgvehtxt" class="justify-content-center">
+                            <div id="vehtxt" class="mt-2 p-2">
+                                <button>5 500&#8364;</button>
+                                <h1 class="p-3">BMW 5351, NAVI, LEATHER, ABS</h1>
+                                <hr id="barreGrise" class="m-3 m-lg-2" />
+                            </div>
+                        </section>
+                    </section>
+                    <section id="vehicule" class="col-12 col-lg-4 m-0 p-0">
+                        <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="img-fluide col-12" />
+                        <section id="bgvehtxt" class="justify-content-center">
+                            <div id="vehtxt" class="mt-2 p-2">
+                                <button>8 000&#8364;</button>
+                                <h1 class="p-3">BMW 3281, SPORT LINE BODY KIT</h1>
+                                <hr id="barreGrise" class="m-3 m-lg-2" />
+                            </div>
+                        </section>
+                    </section>
+                    <section id="vehicule" class="col-12 col-lg-4 m-0 p-0">
+                        <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="img-fluide col-12"/>
+                        <section id="bgvehtxt" class="justify-content-center">
+                            <div id="vehtxt" class="mt-2 p-2">
+                                <button><span>9 000&#8364;</span><br />8 200&#8364;</button>
+                                <h1 class="p-3">FORD EXPLORER 2015 4WD</h1>
+                                <hr id="barreGrise" class="m-3 m-lg-2" />
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Pourquoi nous choisir -->
+            <section id="NousChoisir" class="container-fluid m-0 p-0">
+                <h1 id="ttlNousChoisir" class="justify-content-center row p-5 m-0">Pourquoi nous choisir ?</h1>
+                <section id="raisons" class="row">
+                    <section id="Finance" class="col-12 col-lg-3">
+                        <div class="row m-4">
+                            <img src="/images/icon1.png" alt="etiquette de prix" class="col-2 col-lg-3 pt-5 pt-lg-3 px-0 m-0 aria-hidden='true'"/>
+                            <div class="col-9 p-0 mx-0">
+                                <h1 class="p-3">Financement</h1>
+                                <p id="TxtNousChoisir" class="ps-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus cum autem voluptas earum culpa. Repudiandae omnis cumque, eum, quam, magni maiores repellendus expedita veniam hic possimus doloribus magnam officia. Cumque.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="Equipe" class="col-12 col-lg-3">
+                        <div class="row m-4">
+                            <img src="/images/icon2.png" alt="compteur de vitesse d'automobile" class="col-2 col-lg-3 pt-5 pt-lg-3 px-0 m-0 aria-hidden='true'"/>
+                            <div class="col-9 p-0 mx-0">
+                                <h1 class="p-3">R&#201;activit&#201; de l'&#201;quipe technique</h1>
+                                <p id="TxtNousChoisir" class="ps-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus cum autem voluptas earum culpa. Repudiandae omnis cumque, eum, quam, magni maiores repellendus expedita veniam hic possimus doloribus magnam officia. Cumque.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="Clientele" class="col-12 col-lg-3">
+                        <div class="row m-4">
+                            <img src="/images/icon3.png" alt="bulles de dialogue" class="col-2 col-lg-3 pt-5 pt-lg-3 px-0 m-0 aria-hidden='true'"/>
+                            <div class="col-9 p-0 mx-0">
+                                <h1 class="p-3">A L'&#201;coute de notre client&#200;le</h1>
+                                <p id="TxtNousChoisir" class="ps-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus cum autem voluptas earum culpa. Repudiandae omnis cumque, eum, quam, magni maiores repellendus expedita veniam hic possimus doloribus magnam officia. Cumque.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="Service" class="col-12 col-lg-3">
+                        <div class="row m-4">
+                            <img src="/images/icon4.png" alt="block notes" class="col-2 col-lg-3 pt-5 pt-lg-3 px-0 m-0 aria-hidden='true'"/>
+                            <div class="col-9 p-0 mx-0">
+                                <h1 class="p-3">Services &amp; maintenance</h1>
+                                <p id="TxtNousChoisir" class="ps-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus cum autem voluptas earum culpa. Repudiandae omnis cumque, eum, quam, magni maiores repellendus expedita veniam hic possimus doloribus magnam officia. Cumque.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="row justify-content-center">
+                    <button id="contacter" class="col-2 my-5 me-5"><a href="/about.html">Contactez-nous</a></button>
+                </section>
+            </section>
+
+            <!-- Club Auto Vente et Location -->
+            <section id="ClubAutoVL" class="container-fluid p-5 m-0">
+                <section id="txtVL" class="col-12 offset-lg-1 col-lg-5">
+                    <h1><span>club auto</span> vente et location</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab facere, error fuga quam fugiat natus delectus reiciendis molestias blanditiis voluptatum saepe est labore repudiandae rerum perspiciatis libero debitis tempore temporibus.</p>
+                </section>
+            </section>
+        </main>
+        
+<!-- Pied de page -->
+        <footer class="container-fluid m-0 p-5">
+            <section class="row">
+                <section id="FooterTitre" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0"><span id="Club">CLUB</span> AUTO</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eligendi iure magni veniam illo natus ut quia nam ex dignissimos unde eos rerum, distinctio, mollitia dolor temporibus dolorem tenetur? Quidem.</p>
+                </section>
+                <section id="FooterOuverture" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0">HORAIRES D'OUVERTURE</h1>
+                    <p>
+                        <strong>Lundi-Samedi :</strong><span id="ouvert"> 09:00 -17:00</span><br />
+                        <strong>Dimanche et jours f&#233;ri&#233;s :</strong><span id="ouvert"> Ferm&#233;</span>
+                    </p>
+                </section>
+                <Section id="Newsletter" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0">NEWSLETTER</h1>
+                    <input id="email" type="email" titre="Entrez votre email" required/> 
+                    <button type="submit" style="font-weight:bold;background-color:#CC6119; color:#ffffff" for="email"> <i class="fa-solid fa-wifi fa-rotate-90" style="font-weight:bold;background-color:#CC6119; color:#ffffff"></i></button><br />
+                    <label for="email">Inscrivez-vous pour recevoir les derni&#232;res offres</label>
+                </section>
+                <section id="FootSociaux" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0">RESEAUX SOCIAUX</h1>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>                
+                    <i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-square-youtube"></i>
+                </section>
+                <hr id="barreGrise" class="m-3 m-lg-2" />
+                <section id="Copyrigth">
+                    <h1 class="pt-3"><p>Copyrigth &copy; Club Auto - Tout droits réservés</p></h1>
+                </section>
+            </section>
+        </footer>
+    </body>
+</html>
