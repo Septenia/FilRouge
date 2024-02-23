@@ -82,7 +82,6 @@ h1, h2, h3 {
 }
 
 /* BARRE DE NAVIGATION */
-
 /*.custom-toggler.navbar-toggler-icon { 
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#6C98E1' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
 } 
@@ -259,7 +258,7 @@ article {
 }
 
 /* Bouton Contact page d'accueil */
-#contacter{
+#contacter {
     background-color: #6C98E1;
     font-weight: bold;
     border : none;
@@ -287,7 +286,7 @@ article {
 #ClubAutoVL {
     background-image: url("../images/vehicule3.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
     background-position: center top;
     margin :15px 15px 45px 15px;
     padding : 85px 0 ; /* 85 pour faire déborder l'image de la zone de texte */
@@ -307,6 +306,48 @@ article {
     background-color: #FAB637;
     opacity:0.7;
     padding : 65px;
+}
+
+/* ************************************************************************************************* */
+/* CONTENU PAGE CONTACT */
+/* ************************************************************************************************* */
+#ContenuPrincipal.contact {
+    background-image: url("../images/vehicule3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+#FrmContact {
+    margin: 25px ;
+    padding : 25px;
+    background-color: #ffffff;
+}
+
+#FrmContact input {
+    font-size: small;
+    background-color: #ECEFF3;
+}
+
+#ContactNous h1{
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+#btnEnvoyer {
+    background-color: #6C98E1;
+    font-weight: bold;
+    border : none;
+    min-width:max-content;
+    height: 65px;
+    padding:15px 45px;
+    border-radius: 5px;
+}
+
+#btnEnvoyer span{
+    text-decoration: none;
+    color :#ffffff;
+    text-transform: uppercase;
 }
 
 /* ************************************************************************************************* */
