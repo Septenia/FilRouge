@@ -57,8 +57,8 @@
                 </button>-->
                 <nav role="navigation" class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-0 "> <!--ms-auto permet de décaller la barre de nav à droite, l'inverse est me-auto (start et end), pour faire des boutons arrondis, ajouter nav-pills dans les classes, ici, ça fait moche -->
-                        <li class="nav-item active">
-                            <a class="nav-link m-0 ps-3" aria-current="page" id="PageAffichee" href="/index.html">Accueil</a>
+                        <li class="nav-item">
+                            <a class="nav-link m-0 ps-3"  href="/index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link m-0 ps-3" href="/vente.html">Vente</a>
@@ -67,18 +67,23 @@
                             <a class="nav-link m-0 ps-3" href="/location.html">Location</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link m-0 ps-3" href="/about.html">Contact</a>
+                            <a class="nav-link m-0 ps-3" aria-current="page" id="PageAffichee" href="/about.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </section>
         </header>
 
-        
-
 <!-- Contenu -->        
-        <main id="ContenuPrincipal">
-
+        <main id="ContenuPrincipal" class="contact">
+            <main id="ContenuPrincipal" class="contact container-fluid py-5">
+                <section id="ContactNous" class="row p-lg-5 justify-content-center">
+                    <div>
+                        <p class="h1">Votre inscription à la newsletter a bien été prise en compte.</p><br />
+                        <p class="h1">A très bientôt.</p>
+                    </div>
+                </section>
+            </main>
         </main>
         
  <!-- Pied de page -->

@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <meta name="description" content="Page d'accueil du site CLUB AUTO" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/icones/Auto.png">
         <title>CLUB AUTO - Accueil</title>
         <!--<link rel="stylesheet " href="/css/normalize_8.0.1.css">-->
         <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -37,8 +38,8 @@
                     <h1>OUVERTURE : <strong id="sthoraire">Du Lundi au Samedi</strong><br /> HORAIRES : <strong id="sthoraire">De 9h à 17h</strong></h1>
                 </address>
                 <address id="sociaux" class="col-lg-1 d-none d-lg-block">
-                    <a class="me-1" style="--bs-link-color-rgb: #ffffff" href="#"><i class="fab fa-facebook" id="fb"></i></a>
-                    <a class="ms-1" style="--bs-link-color-rgb: #ffffff" href="#"><i class="fab fa fa-twitter" id="twitter"></i></a>
+                    <a class="me-1" href="#" aria-label="Aller vers Facebook"><i class="fab fa-facebook" id="fb"></i></a>
+                    <a class="ms-1" href="#" aria-label="Aller vers twitter"><i class="fab fa fa-twitter" id="twitter"></i></a>
                 </address>
             </section>
 
@@ -49,7 +50,7 @@
                 <p class="accessibility"><a href="#ContenuPrincipal" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
 
                 <button id="menuToggle" class="navbar-toggler position-fixed top-0 end-0 z-index-tooltip" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="" role="button"><i class="fa fa-bars" id="imenuToggle"></i></span> 
+                    <span class="" role="button" aria-label="Toggle navigation"><i class="fa fa-bars" id="imenuToggle"></i></span> 
                 </button>
                 <!--<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
@@ -125,7 +126,7 @@
                 <Section id="choix" class="row justify-content-center p-5">
                     <!--Louer-->
                         <div id="louer" class="col-11 col-lg-5 m-4 p-5">
-                            <a class="text-decoration-none" href="/location.html"></a>
+                            <a class="text-decoration-none" href="/location.html" aria-label="Aller vers les voitures de location"></a>
                                 <h1>Vous souhaitez louer ?</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tellus elementum sagittis vitae et leo duis ut diam. Nisi porta lorem mollis aliquam ut porttitor leo. Sem et tortor consequat id porta nibh venenatis. Senectus et netus et malesuada fames ac turpis egestas. Ut tristique et egestas quis ipsum. At varius vel pharetra vel turpis nunc eget lorem. Tristique senectus et netus et malesuada fames. </p>
                             </a>
@@ -133,7 +134,7 @@
                     <!-- Acheter --> 
                         
                         <div id="acheter" class="col-11 col-lg-5 m-4 p-5">
-                            <a class="text-decoration-none" href="/vente.html">  
+                            <a class="text-decoration-none" href="/vente.html" aria-label="Aller vers les voitures en vente">  
                                 <h1>Vous souhaitez acheter ?</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut tellus elementum sagittis vitae et leo duis ut diam. Nisi porta lorem mollis aliquam ut porttitor leo. Sem et tortor consequat id porta nibh venenatis. Senectus et netus et malesuada fames ac turpis egestas. Ut tristique et egestas quis ipsum. At varius vel pharetra vel turpis nunc eget lorem. Tristique senectus et netus et malesuada fames. </p>
                             </a>
@@ -141,7 +142,55 @@
                 </section>
             </div>
 
-            <!-- Véhicules récents --> 
+            <!-- Véhicules récents petits écrans-->
+            <Section id="CrslautoRecent" class="table-row m-0 p-0">
+                <h1 class="justify-content-center row p-5 m-0">
+                    VEHICULES RECENTS
+                    <hr id="barreOrange" class="justify-content-center m-3" />
+                </h1>
+                <div id="CrslVehicules" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" id="vehicule">
+                            <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="d-block w-100"/>
+                            <section id="bgvehtxt" class="justify-content-center">
+                                <div id="vehtxt" class="mt-2 p-2">
+                                    <button>5 500&#8364;</button>
+                                    <h1 class="p-3">BMW 5351, NAVI, LEATHER, ABS</h1>
+                                    <hr id="barreGrise" class="m-3 m-lg-2" />
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item"  id="vehicule">
+                            <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="d-block w-100" />
+                            <section id="bgvehtxt" class="justify-content-center">
+                                <div id="vehtxt" class="mt-2 p-2">
+                                    <button>8 000&#8364;</button>
+                                    <h1 class="p-3">BMW 3281, SPORT LINE BODY KIT</h1>
+                                    <hr id="barreGrise" class="m-3 m-lg-2" />
+                                </div>
+                            </section>
+                        </div>
+                        <div class="carousel-item" id="vehicule">
+                            <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="d-block w-100"/>
+                            <section id="bgvehtxt" class="justify-content-center">
+                                <div id="vehtxt" class="mt-2 p-2">
+                                    <button  class="mt-0 pt-0"><span>9 000&#8364;</span><br />8 200&#8364;</button>
+                                    <h1 class="p-3">FORD EXPLORER 2015 4WD</h1>
+                                    <hr id="barreGrise" class="m-3 m-lg-2" />
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <button type="button" class="carousel-control-prev" data-bs-slide="prev" title="Précédent" data-bs-target="#CrslVehicules">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button type="button" class="carousel-control-next" data-bs-slide="next" title="Suivant" data-bs-target="#CrslVehicules">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </Section>
+
+            <!-- Véhicules récents grands écrans-->
             <Section id="autoRecent" class="container-fluid m-0 p-0">
                 <h1 class="justify-content-center row p-5 m-0">
                     VEHICULES RECENTS
@@ -172,7 +221,7 @@
                         <img src="/images/vehicule2.jpg" alt="Véhicules récents" class="img-fluide col-12"/>
                         <section id="bgvehtxt" class="justify-content-center">
                             <div id="vehtxt" class="mt-2 p-2">
-                                <button><span>9 000&#8364;</span><br />8 200&#8364;</button>
+                                <button class="mt-0 pt-0"><span>9 000&#8364;</span><br />8 200&#8364;</button>
                                 <h1 class="p-3">FORD EXPLORER 2015 4WD</h1>
                                 <hr id="barreGrise" class="m-3 m-lg-2" />
                             </div>
@@ -222,9 +271,9 @@
                         </div>
                     </section>
                 </section>
-                <section class="row justify-content-center">
-                    <button id="contacter" class="col-2 my-5 me-5"><a href="/about.html">Contactez-nous</a></button>
-                </section>
+                <form class="row justify-content-center" action="/about.html">
+                    <button id="BtnContact" type="submit" class="col-2 my-5 me-5"><span>Contactez-nous</span></button>
+                </form>
             </section>
 
             <!-- Club Auto Vente et Location -->
@@ -250,12 +299,12 @@
                         <strong>Dimanche et jours f&#233;ri&#233;s :</strong><span id="ouvert"> Ferm&#233;</span>
                     </p>
                 </section>
-                <Section id="Newsletter" class="col-12 col-lg-3">
+                <form id="Newsletter" class="col-12 col-lg-3" action="Newsletter.html">
                     <h1 class="mt-4 mt-lg-0">NEWSLETTER</h1>
                     <input id="email" type="email" titre="Entrez votre email" required/> 
-                    <button type="submit" style="font-weight:bold;background-color:#CC6119; color:#ffffff" for="email"> <i class="fa-solid fa-wifi fa-rotate-90" style="font-weight:bold;background-color:#CC6119; color:#ffffff"></i></button><br />
+                    <button type="submit" aria-label="Envoyer" for="email"> <i class="fa-solid fa-wifi fa-rotate-90"></i></button><br />
                     <label for="email">Inscrivez-vous pour recevoir les derni&#232;res offres</label>
-                </section>
+                </form>
                 <section id="FootSociaux" class="col-12 col-lg-3">
                     <h1 class="mt-4 mt-lg-0">RESEAUX SOCIAUX</h1>
                     <i class="fa-brands fa-square-facebook"></i>

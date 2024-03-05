@@ -50,7 +50,7 @@ h1, h2, h3 {
     color : #ECEFF3;
 }
 
-#autoRecent, article h1, #ContactNous h1 {
+#autoRecent, article h1, #ContactNous h1, .cpvente h1 {
     background-color: #ffffff ;
     color : #232628;
 }
@@ -186,11 +186,14 @@ article {
 }
 
 /* VEHICULES RECENTS */
-#autoRecent{
+#autoRecent {
+    display :none;
+}
+#autoRecent, #CrslautoRecent{
     background-color: #232628;
 }
 
-#autoRecent h1:first-child{
+#autoRecent h1:first-child, #CrslautoRecent h1:first-child{
     font-size: 2.5em;
     text-align :center;
 }
@@ -218,10 +221,12 @@ article {
 #vehicule button {
     background-color: #6C98E1;
     color :#ECEFF3;
+    font-size: large;
     font-weight: bold;
     border : none;
     padding:15px;
     margin-left : 55px;
+    height: 65px;
 }
 
 #vehicule button span{
@@ -258,7 +263,8 @@ article {
 }
 
 /* Bouton Contact page d'accueil */
-#contacter {
+/* Bouton Contact page d'accueil */
+#BtnContact {
     background-color: #6C98E1;
     font-weight: bold;
     border : none;
@@ -268,17 +274,17 @@ article {
     border-radius: 5px;
 }
 
-#contacter a {
+#BtnContact span{
     text-decoration: none;
     color :#ffffff;
     text-transform: uppercase;
 }
 
-#contacter:hover {
+#BtnContact:hover {
     background-color :#CC6119;
 }
 
-#contacter:active {
+#BtnContact:active {
     background-color:#ECEFF3;
 }
 
@@ -312,24 +318,53 @@ article {
 /* CONTENU PAGE CONTACT */
 /* ************************************************************************************************* */
 #ContenuPrincipal.contact {
+    display: flex;
     background-image: url("../images/vehicule3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
+    align-items: center;
+    justify-content: center;
+}
+
+#ContactNous {
+    width: 85%;
+    height: max-content;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 50px 10px #232628; /* offset-x | offset-y | blur-radius | spread-radius | color */
 }
 
 #FrmContact {
     margin: 25px ;
     padding : 25px;
-    background-color: #ffffff;
+}
+
+#FrmContact label{
+    color :#232628;
+    opacity : 100%;
+    padding:35px 0px 15px 0px;
 }
 
 #FrmContact input {
-    font-size: small;
     background-color: #ECEFF3;
+    border-radius: 0%;
+    border:none;
+    height: 65px;
+    font-size: small;
+    width: 100%;
+}
+
+#FrmContact textarea {
+    background-color: #ECEFF3;
+    border-radius: 0%;
+    border:none;
+    height: 155px;
+    font-size: small;
+    width: 100%;
 }
 
 #ContactNous h1{
+    margin:45px;
     text-transform: uppercase;
     background-color: #ffffff;
 }
@@ -340,6 +375,7 @@ article {
     border : none;
     min-width:max-content;
     height: 65px;
+    margin-top : 25px;
     padding:15px 45px;
     border-radius: 5px;
 }
@@ -348,6 +384,75 @@ article {
     text-decoration: none;
     color :#ffffff;
     text-transform: uppercase;
+}
+
+#btnEnvoyer:hover {
+    background-color :#CC6119;
+}
+
+#btnEnvoyer:active {
+    background-color:#ECEFF3;
+}
+
+/* ************************************************************************************************* */
+/* CONTENU DE VENTE */
+/* ************************************************************************************************* */
+#XSDetailVehicule, #LGDetailVehicule{
+    background-color: #232628;
+}
+
+#LGDetailVehicule{
+    display: none;
+}
+
+.cpvente, .tab-content {
+    background-color: #ffffff;
+}
+
+.cpvente a {
+    text-decoration: none;
+}
+
+.breadcrumb {
+    opacity:0.5;
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.accordion-header button, #LGDetailVehicule .nav-link{
+    background-color: #232628;
+    color:#ffffff;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.accordion-button:not(.collapsed), #LGDetailVehicule .nav-tabs .active{
+    background-color: #ffffff;
+    color: #232628;
+    border-top:7px solid #CC6119;
+    Border-bottom:7px solid #ffffff;
+    margin : 0 7px;
+}
+
+#AcVehicule .card, #TbVehicule .card {
+    opacity:0.8;
+    border-left : 7px solid #CC6119;
+    margin-bottom:25px;
+    border-top:none;
+    border-right: none;
+    border-bottom:none;
+}
+
+#collapseThree ul, #options ul {
+    padding : 15px;
+    color : #CC6119 ;
+    list-style-type:none;
+    line-height: 45px;
+}
+
+#collapseThree ul span, #options ul span {
+    color : #232628;
+    padding-left:10px;
 }
 
 /* ************************************************************************************************* */
@@ -367,6 +472,15 @@ footer p, label {
     color:#6C98E1;
 }
 
+#Newsletter button, #Newsletter .offcanvas-header, #Newsletter .offcanvas-header h1{
+    background-color: #CC6119;
+    color :#ffffff
+}
+
+#Newsletter .offcanvas-body {
+    color :#232628 ;
+}
+
 /* Aspect des icônes des réseaux sociaux */
 #FootSociaux i {
     color : #ECEFF3 ;
@@ -380,7 +494,9 @@ footer p, label {
 }
 
 
-/* AFFICHAGE POUR LES ECRANS DE TAILLE LG ET PLUS  */
+/* ************************************************************************************************* */
+/* AFFICHAGE POUR LES ECRANS DE TAILLE LG ET PLUS */
+/* ************************************************************************************************* */
 @media screen and (min-width:992px) {
 
     /* Entête */
@@ -426,7 +542,17 @@ footer p, label {
         font-weight:normal ;
     }
 
+    /* ************************************************************************************************* */
     /* VEHICULES RECENTS LG */
+    /* ************************************************************************************************* */
+    #autoRecent {
+        display: block;
+    }
+
+    #CrslautoRecent{
+       display: none;
+    }
+
     #vehicule h1{
         font-size:larger;
     }
@@ -435,7 +561,9 @@ footer p, label {
         float: right;
     }
 
+   /* ************************************************************************************************* */
     /* NOUS CHOISIR */
+    /* ************************************************************************************************* */
     #Finance h1, #Equipe h1, #Clientele h1, #Service h1 {
         font-size:larger;
     }
@@ -445,10 +573,38 @@ footer p, label {
         height: 55px;
     }
 
-    /* FOOTER Se superpose au dernier article */
-    footer {
-        position : fixed;
-        bottom : 0;
+    /* ************************************************************************************************* */
+    /* CONTENU PAGE CONTACT */
+    /* ************************************************************************************************* */
+    #ContactNous {
+        margin: 150px 0;
+    }
+    
+    #FrmContact input, #FrmContact textarea {
+        font-size:large;
     }
 
+    #FrmContact textarea {
+        height:220px;
+    }
+    
+   /* ************************************************************************************************* */
+    /* CONTENU DE VENTE */
+    /* ************************************************************************************************* */
+    #XSDetailVehicule{
+        display: none;
+    }
+
+    #LGDetailVehicule{
+        display: block;
+    }
+
+    .cpvente {
+        padding-top :125px;
+    }
+
+    #DetailVehicule{
+        width: 85%;
+        align-items: center;
+    }
 }

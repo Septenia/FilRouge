@@ -5,10 +5,11 @@
         <meta charset="utf-8" />
         <meta name="description" content="Page d'accueil du site CLUB AUTO" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/icones/Auto.png">
         <title>CLUB AUTO - Accueil</title>
         <!--<link rel="stylesheet " href="/css/normalize_8.0.1.css">-->
-        <link rel="stylesheet " href="/css/bootstrap.min.css">
-        <link rel="stylesheet " href="/css/ca.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/ca.css">
         <link rel="stylesheet" href="/icones/fontawesome-free-6.5.1-web/css/all.css">
         <script src="/js/jquery-3.4.1.min.js"></script>
         <script src="/js/bootstrap.bundle.min.js" defer></script>
@@ -37,8 +38,8 @@
                     <h1>OUVERTURE : <strong id="sthoraire">Du Lundi au Samedi</strong><br /> HORAIRES : <strong id="sthoraire">De 9h à 17h</strong></h1>
                 </address>
                 <address id="sociaux" class="col-lg-1 d-none d-lg-block">
-                    <a class="me-1" style="--bs-link-color-rgb: #ffffff" href="#"><i class="fab fa-facebook" id="fb"></i></a>
-                    <a class="ms-1" style="--bs-link-color-rgb: #ffffff" href="#"><i class="fab fa fa-twitter" id="twitter"></i></a>
+                    <a class="me-1" href="#" aria-label="Aller vers Facebook"><i class="fab fa-facebook" id="fb"></i></a>
+                    <a class="ms-1" href="#" aria-label="Aller vers twitter"><i class="fab fa fa-twitter" id="twitter"></i></a>
                 </address>
             </section>
 
@@ -49,24 +50,24 @@
                 <p class="accessibility"><a href="#ContenuPrincipal" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
 
                 <button id="menuToggle" class="navbar-toggler position-fixed top-0 end-0 z-index-tooltip" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="" role="button"><i class="fa fa-bars" id="imenuToggle"></i></span> 
+                    <span class="" role="button" aria-label="Toggle navigation"><i class="fa fa-bars" id="imenuToggle"></i></span> 
                 </button>
                 <!--<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>-->
-                <nav role="navigation" class="collapse navbar-collapse " id="navbarSupportedContent">
+                <nav role="navigation" class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-0 "> <!--ms-auto permet de décaller la barre de nav à droite, l'inverse est me-auto (start et end), pour faire des boutons arrondis, ajouter nav-pills dans les classes, ici, ça fait moche -->
+                        <li class="nav-item">
+                            <a class="nav-link m-0 ps-3"  href="/index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-0 ps-3" href="/vente.html">Vente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link m-0 ps-3" href="/location.html">Location</a>
+                        </li>
                         <li class="nav-item active">
-                            <a class="nav-link m-0" href="/index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link m-0" href="/vente.html">Vente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link m-0" href="/location.html">Location</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link m-0" aria-current="page" id="PageAffichee" href="/about.html">Contact</a>
+                            <a class="nav-link m-0 ps-3" aria-current="page" id="PageAffichee" href="/about.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -75,79 +76,83 @@
 
 
 <!-- Contenu -->        
-        <main id="ContenuPrincipal" class="contact container-fluid h-100 p-5">
-            <section id="ContactNous" class="container-fluid h-100">
-               <div class="row m-5">
-                    <div class="m-5 justify-content-center">
-                        <form id="FrmContact" action="merci.html">
-                            <fieldset class="m-5">
-                                    <h1 class="mb-5">contactez-nous</h1>
-                                    <div class="form-group mb-3">
+        <main id="ContenuPrincipal" class="contact container-fluid py-5">
+            <section id="ContactNous" class="row p-lg-5 justify-content-center">
+                    <h1 class="mb-5">contactez-nous</h1>
+                    <form id="FrmContact" action="merci.html">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="form-group mb-3 col-lg-6">
                                         <label for="Prenom" class="d-block">Prénom*</label>
                                         <input type="text" name="Prenom" id="Prenom" placeholder="Entrez votre prénom"  class="form-control-lg" required/>
                                     </div>
-                                    <div class="form-group mb-3">
+                                    <div class="form-group mb-3 col-lg-6">
                                         <label for="NomDeFamille" class="d-block">Nom*</label>
                                         <input type="text" name="NomDeFamille" id="NomDeFamille" placeholder="Entrez votre nom"  class="form-control-lg" required/>
                                     </div>
-                                    <div class="form-group mb-3">
+                                </div>
+                                <div class="row">
+                                    <div class="form-group mb-3 col-lg-6">
                                         <label for="email" class="d-block">Email*</label>
                                         <input type="email" name="email" id="email" placeholder="Entrez une adresse mail valide"  class="form-control-lg" required/>
                                     </div>
-                                    <div class="form-group mb-3">
+                                    <div class="form-group mb-3 col-lg-6">
                                         <label for="tel" class="d-block">Téléphone*</label>
                                         <input type="tel" name="tel" id="tel" placeholder="Entrez votre numéro de téléphone"  class="form-control-lg" />
                                     </div>
-                                    <div class="form-group mb-3">
-                                        <label for="Msg" class="d-block">Message*</label>
-                                        <textarea name="Msg" id="Msg" placeholder="Ecrivez votre message" class="form-control-lg"></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <section class="row justify-content-lg-end ms-5 ms-lg-0 me-lg-5">
-                                            <button id="btnEnvoyer" type="submit" class="col-2 mx-5"><span>Envoyer</span></button>
-                                        </section>
-                                    </div>
-                            </fieldset>
-                        </form>
-                    </div>
-               </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group mb-3">
+                                    <label for="Msg" class="d-block">Message*</label>
+                                    <textarea name="Msg" id="Msg" placeholder="Ecrivez votre message" class="form-control-lg"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <section class="row justify-content-lg-end">
+                                <button id="btnEnvoyer" type="submit" class="col-2"><span>Envoyer</span></button>
+                            </section>
+                        </div>
+                    </form>
             </section>
         </main>
         
 
-        <!-- Pied de page -->
-                <footer class="container-fluid m-0 p-5">
-                    <section class="row">
-                        <section id="FooterTitre" class="col-12 col-lg-3">
-                            <h1 class="mt-4 mt-lg-0"><span id="Club">CLUB</span> AUTO</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eligendi iure magni veniam illo natus ut quia nam ex dignissimos unde eos rerum, distinctio, mollitia dolor temporibus dolorem tenetur? Quidem.</p>
-                        </section>
-                        <section id="FooterOuverture" class="col-12 col-lg-3">
-                            <h1 class="mt-4 mt-lg-0">HORAIRES D'OUVERTURE</h1>
-                            <p>
-                                <strong>Lundi-Samedi :</strong><span id="ouvert"> 09:00 -17:00</span><br />
-                                <strong>Dimanche et jours f&#233;ri&#233;s :</strong><span id="ouvert"> Ferm&#233;</span>
-                            </p>
-                        </section>
-                        <Section id="Newsletter" class="col-12 col-lg-3">
-                            <h1 class="mt-4 mt-lg-0">NEWSLETTER</h1>
-                            <input id="email" type="email" titre="Entrez votre email" required/> 
-                            <button type="submit" style="font-weight:bold;background-color:#CC6119; color:#ffffff" for="email"> <i class="fa-solid fa-wifi fa-rotate-90" style="font-weight:bold;background-color:#CC6119; color:#ffffff"></i></button><br />
-                            <label for="email">Inscrivez-vous pour recevoir les derni&#232;res offres</label>
-                        </section>
-                        <section id="FootSociaux" class="col-12 col-lg-3">
-                            <h1 class="mt-4 mt-lg-0">RESEAUX SOCIAUX</h1>
-                            <i class="fa-brands fa-square-facebook"></i>
-                            <i class="fa-brands fa-square-twitter"></i>
-                            <i class="fa-brands fa-square-instagram"></i>                
-                            <i class="fa-brands fa-google-plus-g"></i>
-                            <i class="fa-brands fa-square-youtube"></i>
-                        </section>
-                        <hr id="barreGrise" class="m-3 m-lg-2" />
-                        <section id="Copyrigth">
-                            <h1 class="pt-3"><p>Copyrigth &copy; Club Auto - Tout droits réservés</p></h1>
-                        </section>
-                    </section>
-                </footer>
-            </body>
-        </html>
+ <!-- Pied de page -->
+        <footer class="container-fluid m-0 p-5">
+            <section class="row">
+                <section id="FooterTitre" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0"><span id="Club">CLUB</span> AUTO</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eligendi iure magni veniam illo natus ut quia nam ex dignissimos unde eos rerum, distinctio, mollitia dolor temporibus dolorem tenetur? Quidem.</p>
+                </section>
+                <section id="FooterOuverture" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0">HORAIRES D'OUVERTURE</h1>
+                    <p>
+                        <strong>Lundi-Samedi :</strong><span id="ouvert"> 09:00 -17:00</span><br />
+                        <strong>Dimanche et jours f&#233;ri&#233;s :</strong><span id="ouvert"> Ferm&#233;</span>
+                    </p>
+                </section>
+                <form id="Newsletter" class="col-12 col-lg-3" action="Newsletter.html">
+                    <h1 class="mt-4 mt-lg-0">NEWSLETTER</h1>
+                    <input id="email" type="email" titre="Entrez votre email" required/> 
+                    <button type="submit" aria-label="Envoyer" for="email"> <i class="fa-solid fa-wifi fa-rotate-90"></i></button><br />
+                    <label for="email">Inscrivez-vous pour recevoir les derni&#232;res offres</label>
+                </form>
+                <section id="FootSociaux" class="col-12 col-lg-3">
+                    <h1 class="mt-4 mt-lg-0">RESEAUX SOCIAUX</h1>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>                
+                    <i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-square-youtube"></i>
+                </section>
+                <hr id="barreGrise" class="m-3 m-lg-2" />
+                <section id="Copyrigth">
+                    <h1 class="pt-3"><p>Copyrigth &copy; Club Auto - Tout droits réservés</p></h1>
+                </section>
+            </section>
+        </footer>
+    </body>
+</html>
