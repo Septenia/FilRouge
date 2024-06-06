@@ -1,5 +1,6 @@
 import "./Product.scss";
 
+import { FunctionComponent } from "react";
 import { prdList } from '../../Datas/PrdList';
 import { Rating } from "../Rating/Rating";
 
@@ -7,12 +8,21 @@ function handleClick(titleArticle) {
   alert(`Vous voulez acheter 1 ${titleArticle}? Très bon choix 🌱✨`);
 }
 
-export function Product (  idArticle,
+export type ProductProps = {
+  idArticle: number;
+  urlImg: string,
+  titleArticle: string,
+  ratingArticle: number,
+  priceArticle: number,
+}
+
+export const Product: FunctionComponent<ProductProps> = ({
+  idArticle,
   urlImg,
   titleArticle,
   ratingArticle,
   priceArticle,
-) {
+}) => {
     {
       return (
         <div
@@ -34,7 +44,7 @@ export function Product (  idArticle,
                 <span>* Indisponible </span>
                 <h1 className="card-title">{titleArticle}</h1>
                 <p className="card-text tarif">{priceArticle} €</p>
-                <p className="card-text"><Rating Score={ratingArticle}></Rating></p>
+                <p className="card-text"><Rating score={ratingArticle}></Rating></p>
                 <p className="card-text">{ratingArticle}</p>
                 <form
                   className="mt-4"
@@ -65,5 +75,5 @@ export function Product (  idArticle,
           </div>
         </div>
       );
-    };
+    }
 };

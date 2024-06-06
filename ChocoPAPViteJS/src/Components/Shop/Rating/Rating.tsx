@@ -1,77 +1,94 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FilledHeart} from './FilledHeart';
-import { faHeart} from '@fortawesome/free-regular-svg-icons';
+import { 
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from '@fortawesome/react-fontawesome';
+import { 
+  faStar as faHeartEmpty,
+} from '@fortawesome/free-regular-svg-icons';
+import { 
+  faStar as faHeartFilled,
+} from '@fortawesome/free-solid-svg-icons';
+import { 
+  faStarHalfStroke as faHeartFilledHalf,
+} from '@fortawesome/free-solid-svg-icons';
 import HalfHeart from '../../../Assets/Images/HalfHeart.svg';
 
 import { prdList } from '../../../Datas/PrdList';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, FunctionComponent } from "react";
 import { clsx } from 'clsx';
 
 import "../../../App.scss";
 import "./Rating.scss";
 
-const EmptyHeart = () => {
-    return (
-      <span>
-            <FontAwesomeIcon id="score" icon={faHeart} bounce className="EmptyHeart"/>
-      </span>
-    )
-  };
+interface Toto {
+  foo: number;
+  bar: number;
+}
 
-  const HalFullHeart = () => {
-    return (
-      <span>
-            <img id="score" src={HalfHeart} className="HalFullHeart" alt='Demi-coeur' />
-      </span>
-    )
-  };
+interface TotoOmit extends Omit<Toto, "foo"> {
+  othodor: boolean;
+}
 
-  function Show({ value, activeLow, activeHigh }) {
-    let showContent = "" ;
-    if (value > (activeLow) && value < (activeHigh)) {
-      showContent = 's activeLow';
-    }
-    if (value >= (activeHigh)) {
-      showContent = 's activeHigh';
-    }
-    if (value = (activeLow)) {
-      showContent = 's';
-    }
-    return (
-      <span className={showContent}>{showContent}<FilledHeart /><HalFullHeart /><EmptyHeart /></span>
-    );
-  }
+const test: TotoOmit = {
   
- 
+}
 
-export function Rating ( {Score} ) {
+type RatingIconProps = Omit<FontAwesomeIconProps, "bounce">;
+
+const RatingIcon: FunctionComponent<RatingIconProps> = (props) => (
+  <FontAwesomeIcon 
+    className="score" 
+    bounce
+    {...props}
+  />
+)
+
+function Show({ value, activeLow, activeHigh }) {
+  if (value > (activeLow) && value < (activeHigh)) {
+    return <RatingIcon icon={faHeartEmpty} />;
+  }
+  if (value >= (activeHigh)) {
+    return <RatingIcon icon={faHeartFilled} />;
+  }
+  if (value == activeLow) {
+    return <RatingIcon icon={faHeartFilledHalf} />;
+  }
+}
+    
+export type RatingProps = {
+  score: number;
+}
+
+export const Rating: FunctionComponent<RatingProps> = ({
+  score,
+}) => {
   {
     return (
       <div>
         <span className="rating_hearts rating_0">
             <Show
-              value = {Score}
+              value = {score}
               activeLow = {0}
               activeHigh = {1}
             />
             <Show
-              value = {Score}
+              value = {score}
               activeLow = {1}
               activeHigh = {2}
             />
             <Show
-              value = {Score}
+              value = {score}
               activeLow = {2}
               activeHigh = {3}
             />
             <Show
-              value = {Score}
+              value = {score}
               activeLow = {3}
               activeHigh = {4}
             />
             <Show
-              value = {Score}
+              value = {score}
               activeLow = {4}
               activeHigh = {5}
             />

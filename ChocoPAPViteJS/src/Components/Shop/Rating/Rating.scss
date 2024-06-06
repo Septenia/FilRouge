@@ -1,55 +1,56 @@
-#score {
-    color: var(--miel);
-    font-size: 14px;
-  }
+.score {
+  color: var(--miel);
+  font-size: 14px;
+
+}
   
-  .rating_hearts {
-      margin-top: 15px;
-      display: inline-block;
-      font-size: 20px;
-      font-weight: 200;
-      color: var(--miel);
-      position: relative;
-    }
-    
-    .rating_hearts span .FilledHeart,
-    .rating_hearts span .HalFullHeart,
-    .rating_hearts span.activeLow .faHeart, 
-    .rating_hearts span.activeHigh .faHeart, 
-    .rating_hearts span.activeLow.FilledHeart, 
-    .rating_hearts span.activeHigh .HalFullHeart
-    {
-      display: none;
-    }
-    
-    .rating_hearts span .faHeart{
-      display: inline-block;
-    }
-    
-    .rating_hearts span.s.activeHigh .FilledHeart{
-      display: inline-block; color: var(--miel);
-    }
-    
-    .rating_hearts span.s.activeLow .HalFullHeart{
-      display: inline-block; color: var(--miel);
-    }
-    
-    .rating_hearts span.r {
-      position: absolute;
-      top: 0;
-      height: 20px;
-      width: 10px;
-      left: 0;
-    }
-    
-    .rating_hearts span.r.r0_5 {left:0px;}
-    .rating_hearts span.r.r1 {left:10px; width: 11px;}
-    .rating_hearts span.r.r1_5 {left:21px; width: 13px;}
-    .rating_hearts span.r.r2 {left:34px; width: 12px;}
-    .rating_hearts span.r.r2_5 {left:46px; width: 12px;}
-    .rating_hearts span.r.r3 {left:58px; width: 11px;}
-    .rating_hearts span.r.r3_5 {left:69px; width: 12px;}
-    .rating_hearts span.r.r4 {left:81px; width: 12px;}
-    .rating_hearts span.r.r4_5 {left:93px; width: 12px;}
-    .rating_hearts span.r.r5 {left:105px; width: 12px;}
-    
+.rating_hearts {
+    margin-top: 15px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 200;
+    color: var(--miel);
+    position: relative;
+}
+
+.rating_hearts span .FilledHeart,
+.rating_hearts span .HalFullHeart,
+.rating_hearts span.activeLow .faHeart, 
+.rating_hearts span.activeHigh .faHeart, 
+.rating_hearts span.activeLow.FilledHeart, 
+.rating_hearts span.activeHigh .HalFullHeart
+{
+  display: none;
+}
+
+.rating_hearts span .faHeart{
+  display: inline-block;
+}
+
+.rating_hearts span.s.activeHigh .FilledHeart{
+  display: inline-block; color: var(--miel);
+}
+
+.rating_hearts span.s.activeLow .HalFullHeart{
+  display: inline-block; color: var(--miel);
+}
+
+.rating_hearts span.r {
+  position: absolute;
+  top: 0;
+  height: 20px;
+  width: 10px;
+  left: 0;
+}
+
+.rating_hearts span.r.r0_5 {left:0px;}
+.rating_hearts span.r.r1 {left:10px; width: 11px;}
+.rating_hearts span.r.r1_5 {left:21px; width: 13px;}
+.rating_hearts span.r.r2 {left:34px; width: 12px;}
+.rating_hearts span.r.r2_5 {left:46px; width: 12px;}
+.rating_hearts span.r.r3 {left:58px; width: 11px;}
+.rating_hearts span.r.r3_5 {left:69px; width: 12px;}
+.rating_hearts span.r.r4 {left:81px; width: 12px;}
+.rating_hearts span.r.r4_5 {left:93px; width: 12px;}
+.rating_hearts span.r.r5 {left:105px; width: 12px;}
+

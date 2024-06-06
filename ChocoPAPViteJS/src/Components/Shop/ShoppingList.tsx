@@ -15,10 +15,11 @@ export const ShoppingList = () => {
             {prdList.map(({ idArticle, urlImg, titleArticle, ratingArticle, priceArticle }) => (
                     <div key={idArticle}>
                         <Product
-                            urlImg={urlImg}
-                            titleArticle={titleArticle}
-                            ratingArticle={ratingArticle}
-                            priceArticle={priceArticle}
+                          idArticle={idArticle}
+                          urlImg={urlImg}
+                          titleArticle={titleArticle}
+                          ratingArticle={ratingArticle}
+                          priceArticle={priceArticle}
                         />
                     </div>
                 ))
