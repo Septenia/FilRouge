@@ -21,19 +21,6 @@ import { clsx } from 'clsx';
 import "../../../App.scss";
 import "./Rating.scss";
 
-interface Toto {
-  foo: number;
-  bar: number;
-}
-
-interface TotoOmit extends Omit<Toto, "foo"> {
-  othodor: boolean;
-}
-
-const test: TotoOmit = {
-  
-}
-
 type RatingIconProps = Omit<FontAwesomeIconProps, "bounce">;
 
 const RatingIcon: FunctionComponent<RatingIconProps> = (props) => (
@@ -46,14 +33,13 @@ const RatingIcon: FunctionComponent<RatingIconProps> = (props) => (
 
 function Show({ value, activeLow, activeHigh }) {
   if (value > (activeLow) && value < (activeHigh)) {
-    return <RatingIcon icon={faHeartEmpty} />;
+    return <RatingIcon icon={faHeartFilledHalf} />;
   }
   if (value >= (activeHigh)) {
     return <RatingIcon icon={faHeartFilled} />;
   }
-  if (value == activeLow) {
-    return <RatingIcon icon={faHeartFilledHalf} />;
-  }
+
+  return <RatingIcon icon={faHeartEmpty} />;
 }
     
 export type RatingProps = {
