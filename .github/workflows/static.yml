@@ -36,15 +36,14 @@ jobs:
       - name: NPM setup
         # @see https://stackoverflow.com/a/63100715/1731473
         run: |
-          cd ./ChocoPap
+          cd ./ChocoPAPViteJS
           npm ci
           npm run build -- --base-href=/${GITHUB_REPOSITORY#*/}/
-          cp dist/choco-pap/browser/index.html dist/choco-pap/browser/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './ChocoPap/dist/choco-pap/browser'
+          path: './ChocoPAPViteJS/dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
