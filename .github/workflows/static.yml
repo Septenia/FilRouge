@@ -33,17 +33,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: NPM setup
-        # @see https://stackoverflow.com/a/63100715/1731473
-        run: |
-          cd ./ChocoPAPViteJS
-          npm ci
-          npm run build -- --base-href=/${GITHUB_REPOSITORY#*/}/
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: './ChocoPAPViteJS/dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # - name: NPM setup
+      #   # @see https://stackoverflow.com/a/63100715/1731473
+      #   run: |
+      #     cd ./ChocoPAPViteJS
+      #     npm ci
+      #     npm run build -- --base-href=/${GITHUB_REPOSITORY#*/}/
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     # Upload entire repository
+      #     path: './ChocoPAPViteJS/dist'
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
