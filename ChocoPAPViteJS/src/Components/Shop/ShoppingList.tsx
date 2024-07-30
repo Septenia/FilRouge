@@ -43,6 +43,10 @@ export const ShoppingList = () => {
   };
 
 
+
+
+  
+
   const filteredProducts = useMemo(() => {
     return prdList.filter((product) => {
       if ((selectedCategories.length === 0) || (availableSelection.length === 0)) {
@@ -70,7 +74,7 @@ export const ShoppingList = () => {
             onScoreMinChange={handleNoteMinChange}
             onScoreMaxChange={handleNoteMaxChange}
           />
-        
+
         </div>
         <div className='productsList'>
           {filteredProducts.length === 0 && (
