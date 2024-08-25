@@ -2,14 +2,10 @@ import { prdList } from "Datas/prdList";
 import { createContext, ReactNode, FC , useReducer} from "react";
 import { Product } from "../Product/Product";
 
-export const CartContext = createContext({
+export const CartContext = createContext<any>({
       items:[],
       addItemToCart: () => {},
 });
-
-export type CartContextProviderProps = {
-    children: ReactNode ;
-}
 
 const cartReducer = (state:any, action:any) => {
     console.log(state);
@@ -39,7 +35,11 @@ const cartReducer = (state:any, action:any) => {
     return state;
 };
 
-export const CartContextProvider: FC<CartContextProviderProps> = ({ children }) => {
+export type CartContextProviderProps = {
+    children: ReactNode ;
+}
+
+export const CartContextProvider: FC<CartContextProviderProps> = ({ children }:any) => {
     
     const [cartState, cartDispatch] = useReducer (cartReducer, {
         items: [],
@@ -58,9 +58,9 @@ export const CartContextProvider: FC<CartContextProviderProps> = ({ children }) 
     };
 
     return (
-        <CartContext.Provider value={initialValue}>
+        <CartContextProvider value={initialValue}>
             {children}
-        </CartContext.Provider>
+        </CartContextProvider>
     );
 };
 
