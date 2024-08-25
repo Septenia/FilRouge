@@ -1,8 +1,9 @@
 import "./Product.css";
 
 import { Rating } from "../Rating/Rating";
-import { DOMAttributes, FC, useState } from "react";
+import { DOMAttributes, FC, useContext, useState } from "react";
 import { prdList } from '../../../Datas/prdList.ts';
+import { CartContext } from "../CartFilled/CartContext.tsx";
 
 export type ProductProps = {
   idArticle: number;
@@ -35,7 +36,7 @@ export const Product: FC<ProductProps> = ({
 }) => {
 
       const [nbToAdd, setNbToAdd] = useState<number>(0);
-      const [prdCartListChange, setprdCartListChange] = useState<any[]>([]);
+      // const [prdCartListChange, setprdCartListChange] = useState<any[]>([]);
 
       const onNbToAddChange: DOMAttributes<HTMLInputElement>['onChange']  = (event) => {
         const newNbToAdd = event.currentTarget.valueAsNumber;
@@ -43,13 +44,14 @@ export const Product: FC<ProductProps> = ({
         console.log(nbToAdd);
       };
 
-      const onAddedToCartValidation = (id: number) => {
-        const newPrdCartList = prdList.map(product => product.idArticle === id ? 
-          {...product, nbToAdd: nbToAdd } : product );
-          setprdCartListChange(newPrdCartList);
-          console.log(prdCartListChange);
-      }; 
+      // const {onAddedToCartValidation = (id: number) => {
+      //   const newPrdCartList = prdList.map(product => product.idArticle === id ? 
+      //     {...product, nbToAdd: nbToAdd } : product );
+      //     setprdCartListChange(newPrdCartList);
+      //     console.log(prdCartListChange);
+      // }; 
 
+      const { addItemToCart } = useContext(CartContext);
 
     {
       return (
@@ -87,8 +89,8 @@ export const Product: FC<ProductProps> = ({
               <button 
                 type="button" 
                 className="btnAjouter" 
-                onClick={() => onAddedToCartValidation(Product.idArticle)}>
-                Ajouter au panier
+                onClick={() => addItemToCart(idArticle)}>
+                  Ajouter au panier
               </button>
             </div>
           </form>

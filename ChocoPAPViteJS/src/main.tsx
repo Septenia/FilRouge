@@ -11,6 +11,8 @@ import { Home } from "./Components/Home/Home.tsx"
 import { ShoppingList } from "./Components/Shop/ShoppingList.tsx"
 import { CartFilled } from './Components/Shop/CartFilled/CartFilled.tsx';
 
+import { CartContextProvider } from './Components/Shop/CartFilled/CartContext.tsx';
+
 const router = createBrowserRouter(
   [
     {
@@ -40,6 +42,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
   </React.StrictMode>,
 )

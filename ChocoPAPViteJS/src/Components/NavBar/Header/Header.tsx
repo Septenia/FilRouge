@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import logo from "../../../logo.png";
 
@@ -7,21 +7,25 @@ import { faBars as Hamburger, faCartShopping as CartIco,} from '@fortawesome/fre
 
 import { Link } from "react-router-dom";
 
+import { CartContext } from "../../Shop/CartFilled/CartContext";
+
 export const Cart = ( ) => 
     {
+      const { items } = useContext(CartContext);
+
       return (
         <>
-          &nbsp;0 &nbsp;<FontAwesomeIcon id="panier" icon={CartIco} bounce className="panier"/>
+          &nbsp;{items.length} &nbsp;<FontAwesomeIcon id="panier" icon={CartIco} bounce className="panier"/>
         </ >
       );
     };
 
 import "./Header.css"
 
+
 const Logo = () => (
   <img id="logo" src={logo} className="App-logo" alt="logo" />
 );
-
 
 export const Burger = ( ) => 
   {
@@ -33,7 +37,6 @@ export const Burger = ( ) =>
 export const Header = ( ) =>
   {
     const [isOpen, setOpen] = useState(false);
-
 
     return (
 
