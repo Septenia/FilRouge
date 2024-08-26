@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../CartFilled/CartContext.tsx";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as AsideIcon } from '@fortawesome/free-solid-svg-icons';
 import "./CartFilled.css";
 
