@@ -69,7 +69,7 @@
     line-height: var(--bs-btn-line-height);
     border-width: var(--bs-border-width);
     border-radius: var(--bs-border-radius);
-    box-shadow : inset 0 3px 5px var(--caramel);
+    /* box-shadow : inset 0 3px 5px var(--caramel); */
     text-decoration: none;
     transition: all 0.20s ease-in-out;
 }
@@ -78,7 +78,7 @@
     color : var(--meringue);
     background-color: var(--caramel);
     border-color: var(--meringue);
-    box-shadow : inset 0 3px 5px var(--meringue);
+    /* box-shadow : inset 0 3px 5px var(--meringue); */
     transition: all 0.20s ease-in-out;
 }
 
@@ -86,14 +86,17 @@
     color : var(--pateasucre);
     background-color: var(--chocolat);
     border-color: var(--meringue);
-    box-shadow : inset 0 3px 5px var(--pateasucre);
+    /* box-shadow : inset 0 3px 5px var(--pateasucre); */
     transition: all 0.20s ease-in-out;
 }
 
-.btnAjouter:focus{
+/* .btnAjouter:focus{
     box-shadow:3px 3px var(--meringue), -1em 0 .4em var(--pateasucre);
-}
+} */
 
+.ItemsAdded{
+    font-style: italic;
+}
 
 /* ************************************************************************************************* */
 /* AFFICHAGE POUR LES ECRANS DE TAILLE MD ET PLUS */

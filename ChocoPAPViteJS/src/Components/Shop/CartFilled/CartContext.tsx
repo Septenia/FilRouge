@@ -1,43 +1,100 @@
-import { prdList } from "Datas/prdList";
+import { prdList } from "../../../Datas/prdList";
 import { createContext, ReactNode, FC , useReducer} from "react";
-import { Product } from "../Product/Product";
 
-export const CartContext = createContext<any>({
-      items:[],
-      addItemToCart: () => {},
-});
+export type AddItemToCart = (productId: number, quantity: number) => void;
+export type RemoveItemFromCart = (productId: number) => void;
 
-const cartReducer = (state:any, action:any) => {
-    console.log(state);
-    if (action.type === "ADD_PRODUCT_INTO_CART") {
-        const updateCartItems  = [...state.item];
-        const existingElementIndex = updateCartItems.findIndex(
-            (cartItem) => cartItem.id === action.payload.productId
-        );
-        const existingElement = updateCartItems[existingElementIndex]
+export type CartState = {
+    items: { 
+        id: number; 
+        name: string; 
+        price: number , 
+        rating: number, 
+        quantity: number,
+        textAltImg: string,
+        descriptionArticle: string,
+        ingredientsArticle: string,
+        urlImg: string,
+        available : boolean,
+    }[];
+};
 
-        if(existingElement){
-
-        }else {
-            const product = prdList.find(
-                (product) => Product.id === action.payload.prodductid
-            );
-
-            if (product){
-                updateCartItems.push({
-                    id: product.id,
-                    name : product.name,
-                    quantity : 1,
-                });
-            };
-        return items:updateCartItems
-    };
-    return state;
+export type CartAction = {
+    type: string;
+    payload: { productId: number; quantity?: number };
 };
 
 export type CartContextProviderProps = {
-    children: ReactNode ;
-}
+    children: ReactNode 
+};
+
+export const CartContext = createContext<{
+    items: { 
+        id: number; 
+        name: string; 
+        price: number , 
+        rating: number, 
+        quantity: number,
+        textAltImg: string,
+        descriptionArticle: string,
+        ingredientsArticle: string,
+        urlImg: string,
+        available : boolean,
+    }[];
+    addItemToCart: AddItemToCart;
+    removeItemFromCart: RemoveItemFromCart;
+  }>
+  ({
+      items:[],
+      addItemToCart: () => {},
+      removeItemFromCart: () => {},
+});
+
+const cartReducer = (state: CartState, action: CartAction): CartState  => {
+      switch (action.type) {
+        case 'ADD_PRODUCT_INTO_CART':
+            const updatedCartItems = [...state.items];
+            const existingElementIndex = updatedCartItems.findIndex(
+                (cartItem) => cartItem.id === action.payload.productId
+            );
+            const existingElement = updatedCartItems[existingElementIndex];
+
+            if (existingElement) {
+                existingElement.quantity += action.payload.quantity!;
+            } else {
+                const product = prdList.find(
+                    (product) => product.idArticle === action.payload.productId
+                );
+
+                if (product) {
+                    updatedCartItems.push({
+                        id: product.idArticle,
+                        name: product.titleArticle,
+                        price: product.priceArticle,
+                        rating: product.ratingArticle,
+                        quantity: action.payload.quantity!,
+                        textAltImg: product.textAltImg,
+                        descriptionArticle: product.descriptionArticle,
+                        ingredientsArticle: product.ingredientsArticle,
+                        urlImg: product.urlImg,
+                        available: product.available,
+                    });
+                }
+            }
+
+            return { items: updatedCartItems };
+
+        case 'REMOVE_PRODUCT_FROM_CART':
+            return {
+                ...state,
+                items: state.items.filter(item => item.id !== action.payload.productId),
+            };
+
+        default:
+            return state;
+    }
+};
+
 
 export const CartContextProvider: FC<CartContextProviderProps> = ({ children }:any) => {
     
@@ -45,69 +102,29 @@ export const CartContextProvider: FC<CartContextProviderProps> = ({ children }:a
         items: [],
     }) ;
 
-    const handleAddProductToCart = (productId:any) => {
+    const handleAddProductToCart = (productId: number, quantity: number) => {
         cartDispatch({
             type:'ADD_PRODUCT_INTO_CART',
-            payload : {productId:productId},
+            payload: { productId, quantity },
+        });
+    };
+
+    const handleRemoveProductFromCart = (productId: number) => {
+        cartDispatch({
+            type: 'REMOVE_PRODUCT_FROM_CART',
+            payload: { productId },
         });
     };
 
     const initialValue = { 
         items : cartState.items,
         addItemToCart : handleAddProductToCart,
+        removeItemFromCart: handleRemoveProductFromCart,
     };
 
     return (
-        <CartContextProvider value={initialValue}>
+        <CartContext.Provider value={initialValue}>
             {children}
-        </CartContextProvider>
+        </CartContext.Provider>
     );
 };
-
-
-// src/context/CartContext.js
-
-// import React, { createContext, useReducer } from 'react';
-
-// const CartContext = createContext();
-
-// const initialState = {
-//   items: [],
-// };
-
-// const cartReducer = (state, action) => {
-//   switch (action.type) {
-//     case 'ADD_ITEM':
-//       return {
-//         ...state,
-//         items: [...state.items, action.payload],
-//       };
-//     case 'REMOVE_ITEM':
-//       return {
-//         ...state,
-//         items: state.items.filter(item => item.id !== action.payload.id),
-//       };
-//     default:
-//       return state;
-//   }
-// };
-
-// const CartProvider = ({ children }) => {
-//   const [state, dispatch] = useReducer(cartReducer, initialState);
-
-//   const addItem = item => {
-//     dispatch({ type: 'ADD_ITEM', payload: item });
-//   };
-
-//   const removeItem = item => {
-//     dispatch({ type: 'REMOVE_ITEM', payload: item });
-//   };
-
-//   return (
-//     <CartContext.Provider value={{ items: state.items, addItem, removeItem }}>
-//       {children}
-//     </CartContext.Provider>
-//   );
-// };
-
-// export { CartContext, CartProvider };

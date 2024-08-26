@@ -4,12 +4,7 @@ import './ShoppingFilters.css';
 import type { Categories } from '../../../Datas/categoriesList.ts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeftRotate as ResetIco } from '@fortawesome/free-solid-svg-icons';
-// import { prdList } from 'Datas/prdList.ts';
-
-// function handleSubmit(e:any) {
-//     e.preventDefault()
-//     alert(e.target['my_input'].value)
-// }
+ 
 export const Reset = () => {
   return (
     <FontAwesomeIcon id="resetIco" icon={ResetIco} />

@@ -43,6 +43,11 @@
     --pateasucre : #55C0CF ;
     --miel : #FFD543;
     --meringue : #FFFFFF;
+    --bs-btn-font-size: 14px;
+    --bs-btn-font-weight: 500;
+    --bs-btn-line-height: 1.5;
+    --bs-border-width: 1px;
+    --bs-border-radius: 4px;
 }
 
 /* ************************************************************************************************* */

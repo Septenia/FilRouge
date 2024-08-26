@@ -1,21 +1,26 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 import logo from "../../../logo.png";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars as Hamburger, faCartShopping as CartIco,} from '@fortawesome/free-solid-svg-icons';
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { CartContext } from "../../Shop/CartFilled/CartContext";
 
 export const Cart = ( ) => 
     {
       const { items } = useContext(CartContext);
+      const initialValue = 0;
+      const sumQuantity = items.reduce(
+        (accumulator, currentValue) => accumulator + currentValue.quantity,
+        initialValue,
+      );
 
       return (
         <>
-          &nbsp;{items.length} &nbsp;<FontAwesomeIcon id="panier" icon={CartIco} bounce className="panier"/>
+          &nbsp;{sumQuantity} &nbsp;<FontAwesomeIcon id="panier" icon={CartIco} bounce className="panier"/>
         </ >
       );
     };
@@ -24,7 +29,10 @@ import "./Header.css"
 
 
 const Logo = () => (
-  <img id="logo" src={logo} className="App-logo" alt="logo" />
+  <Link to={`/`}>
+    <img id="logo" src={logo} className="App-logo" alt="logo" />
+  </Link>
+
 );
 
 export const Burger = ( ) => 
@@ -37,6 +45,20 @@ export const Burger = ( ) =>
 export const Header = ( ) =>
   {
     const [isOpen, setOpen] = useState(false);
+    const [isActive, setIsActive] = useState('home');
+    const location = useLocation();
+
+    useEffect(() => {
+      const path = location.pathname;
+      if (path === '/') {
+          setIsActive('home');
+      } else if (path === '/Boutique') {
+          setIsActive('shop');
+      } else if (path === '/Panier') {
+          setIsActive('cart');
+      }
+  }, [location]);
+
 
     return (
 
@@ -70,18 +92,38 @@ export const Header = ( ) =>
             >
               <ul className="navbar-nav ">
                 <Link to={`/`} onClick={() => setOpen((prev) => !prev)}>
-                  <li className="nav-item text-style1">
+                  <li 
+                    className={ 
+                      isActive === 'home' ?
+                      'active nav-item text-style1' : 
+                      'nav-item text-style1'
+                    }
+                  >
                     Accueil
                   </li>
                 </Link>
                 <Link to={`/Boutique`} onClick={() => setOpen((prev) => !prev)}>
-                  <li className="nav-item text-style1">
+                  <li
+                    className={ 
+                      isActive === 'shop' ?
+                      'active nav-item text-style1' : 
+                      'nav-item text-style1'
+                    } 
+                  >
                     Boutique
                   </li>
                 </Link>
-                <li className="nav-item panier" onClick={() => setOpen((prev) => !prev)}>
-                  <Link to={`/Panier`}><Cart />Panier</Link>
-                </li>
+                <Link to={`/Panier`}onClick={() => setOpen((prev) => !prev)}>
+                  <li
+                      className={ 
+                        isActive === 'cart' ?
+                        'active nav-item panier' : 
+                        'nav-item panier'
+                      } 
+                    >
+                      <Cart />Panier
+                    </li>
+                </Link>
               </ul>
             </nav>
         </section>

@@ -2,7 +2,6 @@ import "./Product.css";
 
 import { Rating } from "../Rating/Rating";
 import { DOMAttributes, FC, useContext, useState } from "react";
-import { prdList } from '../../../Datas/prdList.ts';
 import { CartContext } from "../CartFilled/CartContext.tsx";
 
 export type ProductProps = {
@@ -36,7 +35,8 @@ export const Product: FC<ProductProps> = ({
 }) => {
 
       const [nbToAdd, setNbToAdd] = useState<number>(0);
-      // const [prdCartListChange, setprdCartListChange] = useState<any[]>([]);
+      const { addItemToCart } = useContext(CartContext);
+      const [itemIsAdded, setitemIsAdded] = useState(false);
 
       const onNbToAddChange: DOMAttributes<HTMLInputElement>['onChange']  = (event) => {
         const newNbToAdd = event.currentTarget.valueAsNumber;
@@ -44,14 +44,12 @@ export const Product: FC<ProductProps> = ({
         console.log(nbToAdd);
       };
 
-      // const {onAddedToCartValidation = (id: number) => {
-      //   const newPrdCartList = prdList.map(product => product.idArticle === id ? 
-      //     {...product, nbToAdd: nbToAdd } : product );
-      //     setprdCartListChange(newPrdCartList);
-      //     console.log(prdCartListChange);
-      // }; 
-
-      const { addItemToCart } = useContext(CartContext);
+      const handleAddToCart = () => {
+        if (nbToAdd > 0) {
+          addItemToCart(idArticle, nbToAdd);
+          setitemIsAdded(true);
+        };
+      };
 
     {
       return (
@@ -72,7 +70,7 @@ export const Product: FC<ProductProps> = ({
           >
             <div className="group">
               <label htmlFor="nbArticles" className="d-block">
-                <p className="BIP">{nbToAdd} article(s) ajoutés au panier'</p>
+                <p className={itemIsAdded ? 'ItemsAdded' : 'hide'}>{nbToAdd} article(s) ajoutés au panier</p>
               </label>
               <input
                 type="number"
@@ -89,7 +87,7 @@ export const Product: FC<ProductProps> = ({
               <button 
                 type="button" 
                 className="btnAjouter" 
-                onClick={() => addItemToCart(idArticle)}>
+                onClick={handleAddToCart}>
                   Ajouter au panier
               </button>
             </div>

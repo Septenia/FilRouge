@@ -91,6 +91,7 @@ ul {
 #navbarSupportedContent li {
     text-align: left;
     border-color: var(--miel);
+    margin-inline : 5px ;
     padding : 15px;
     background-color: var(--chocolat);
     text-shadow: 2px 2px 5px var(--chocolatnoir);
@@ -100,6 +101,9 @@ ul {
     box-shadow : inset 0 3px 5px var(--caramel);
 }
 
+#navbarSupportedContent li:hover {
+    color : var(--caramel)
+}
 
 
 /*Met en évidence le bouton du menu correspondant à la page affichée */
@@ -109,17 +113,9 @@ ul {
     margin-top: 10px;
 }
 
-.panier a {
-    color: var(--meringue);
-    text-decoration: none;
+.active {
+    color : var(--miel)
 }
-
-.active a { 
-    color : var(--pateasucre);
-    text-decoration: none;
-}
-
-
 
 /* ************************************************************************************************* */
 /* AFFICHAGE POUR LES ECRANS DE TAILLE MD ET PLUS */
@@ -137,15 +133,6 @@ ul {
         height: min-content;
     }
     
-    #navbarSupportedContent li {
-        display: inline-block ;
-        background-color: transparent;
-        border: none ;
-        box-shadow :none;
-        margin: 0;
-        padding: 0;
-    }
-
     #navbarSupportedContent {
         display: flex;
         position: relative;
@@ -155,25 +142,37 @@ ul {
         margin-right:1rem;
     }
 
-    #navbarSupportedContent a {
-        border:none;
-        padding : 10px;
+    #navbarSupportedContent li {
+        display: inline-block ;
         background-color: transparent;
-        box-shadow : none ;
+        text-shadow: 2px 2px 5px var(--caramel);
+        border: none ;
+        box-shadow :none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navbarSupportedContent li:hover {
+        color : var(--miel)
+    }
+
+    #navbarSupportedContent a {
+        padding : 10px;
     }
 
     #menuToggle {
         display: none ;
     }
 
-    #HMenu a:hover {
-        color : var(--chocolatnoir);
-    }
-
-
     .nav-link{
         width: auto;
         margin-inline: 0;
     }
+
+    .active {
+        color : var(--caramel);
+        text-shadow: 2px 2px 5px var(--meringue);
+    }
+    
      
 }

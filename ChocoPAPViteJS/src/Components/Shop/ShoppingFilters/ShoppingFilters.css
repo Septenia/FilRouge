@@ -150,19 +150,19 @@ select {
     margin: 0 5px 45px 5px;
 }
 
-.btnAllCat :hover, .btnNoneCat :hover{
+.btnAllCat:hover, .btnNoneCat:hover{
     color : var(--meringue);
     background-color: var(--caramel);
     border-color: var(--meringue);
-    box-shadow : inset 0 3px 5px var(--meringue);
+    /* box-shadow : inset 0 3px 5px var(--meringue); */
     transition: all 0.20s ease-in-out;
 }
 
-.btnAllCat :active, .btnNoneCat :active{
+.btnAllCat:active, .btnNoneCat:active{
     color : var(--pateasucre);
     background-color: var(--chocolat);
     border-color: var(--meringue);
-    box-shadow : inset 0 3px 5px var(--pateasucre);
+    /* box-shadow : inset 0 3px 5px var(--pateasucre); */
     transition: all 0.20s ease-in-out;
 }
 

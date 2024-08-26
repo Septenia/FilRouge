@@ -11,10 +11,11 @@
     padding-left: 1.40rem ;
 }
 
-.colQuantity {
-    width: 20%;
+.colQuantity, .form-control {
+    width: 35%;
     text-align: center;
     text-transform: uppercase;
+    padding: 0.05em;
 }
 
 .colPrice {
@@ -101,32 +102,13 @@
     color: var(--chocolatnoir);
 }
 
-.btn.btn-out {
-    outline: 1px solid var(--miel);
-    outline-offset: -5px ;
+#AsideIcon {
+    margin-bottom: 0.8em ;
 }
 
-.btn-main{
-    border-radius: 2px ;
-    text-transform: capitalize;
-    font-size: 15px;
-    padding: 10px 19px;
-    cursor: pointer;
-    color: var(--chocolat);
-    width: 100% ;
+#AsideIcon:hover {
+    margin-bottom: 0.8em ;
 }
-
-.btn-light {
-    color: var(--meringue);
-    background-color: var(--caramel);
-    border-color: var(--meringue);
-    font-size: 12px ;
-}
-
-.btn-light:hover {
-    color: var(--meringue);
-    background-color: var(--patasucre);
-    border-color: var(--caramel)}.btn-apply{font-size: 11px}
 
 .ajouter {
     vertical-align: middle;
@@ -134,10 +116,10 @@
     padding : 5px 10px;
     font-size: var(--bs-btn-font-size);
     font-weight: var(--bs-btn-font-weight);
-    line-height: var(--bs-btn-line-height);
+    line-height: 0.8em;
     border-width: var(--bs-border-width);
     border-radius: var(--bs-border-radius);
-    box-shadow : inset 0 3px 5px var(--chocolat);
+    /* box-shadow : inset 0 3px 5px var(--chocolat); */
     text-decoration: none;
     transition: all 0.20s ease-in-out;
 }
@@ -146,7 +128,7 @@
     color : var(--meringue);
     background-color: var(--caramel);
     border-color: var(--meringue);
-    box-shadow : inset 0 3px 5px var(--meringue);
+    /* box-shadow : inset 0 3px 5px var(--meringue); */
     transition: all 0.20s ease-in-out;
 }
 
@@ -154,7 +136,7 @@
     color : var(--pateasucre);
     background-color: var(--chocolat);
     border-color: var(--meringue);
-    box-shadow : inset 0 3px 5px var(--pateasucre);
+    /* box-shadow : inset 0 3px 5px var(--pateasucre); */
     transition: all 0.20s ease-in-out;
 }
 
@@ -164,15 +146,15 @@
 
 .retour {
     vertical-align: middle;
-    color : var(--chocolatnoir);
-    background-color: var(--pateasucre);
+    color : var(--pateasucre);
+    background-color: var(--meringue);
     padding : 5px 10px;
     font-size: var(--bs-btn-font-size);
     font-weight: var(--bs-btn-font-weight);
-    line-height: var(--bs-btn-line-height);
+    line-height: 0.8em;
     border-width: var(--bs-border-width);
     border-radius: var(--bs-border-radius);
-    box-shadow : inset 0 3px 5px var(--caramel);
+    /* box-shadow : inset 0 3px 5px var(--caramel); */
     text-decoration: none;
     transition: all 0.20s ease-in-out;
 }
